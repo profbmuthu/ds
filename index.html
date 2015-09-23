@@ -1,1 +1,1238 @@
-## My Page
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Workshop on BigData</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Workshop on BigData">
+  <meta name="author" content="Dr.Muthukumaran">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Workshop on BigData</h1>
+    <h2>Focus on Streaming</h2>
+    <p>Dr.Muthukumaran<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Read-And-Delete</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Edit YAML front matter</li>
+<li>Write using R Markdown</li>
+<li>Use an empty line followed by three dashes to separate slides!</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>What is Big data?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Myth About Big Data - With Big Data, We’ve Moved into a New Era of Analytics</li>
+<li>Big data is data that exceeds the processing capacity of traditional database systems. 
+– The data doesn’t fit the gloves of traditional database architectures
+– The data is too big and moves too fast </li>
+<li>Big Data does not only relate to the size of data</li>
+<li>Its about triggering an offer while a shopper is standing on a checkout line</li>
+<li>Its about placing an ad on a website while someone is reading a specific article. </li>
+<li>It’s about combining and analyzing data so you can take the right action, at the right time, and at the right place.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>What is Big Data?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>– Complexity: missing information, dummy data, organization
+– Processing: Software, processing power, parallel and distributed computing 
+– Data Transfer: Limitations of current systems, CPU intensive
+– Storage:  Data sets beyond relational database, clusters, data centers, distributed data
+– User Interaction: Non-programmers need to perform complex information, real time GUI interfaces, visualization of data</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>What is Big data?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Big Data is all about better analytics on a broader spectrum of data, and therefore represents an opportunity to create even more differentiation among industry peers</li>
+<li>Walmart’s push to use RFID tags for supply chain optimization illustrates the dawn of the Big Data era. </li>
+<li>RFID is a great example of machine-speed-generated data that could be collected and analyzed.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>What is an example for big data flow?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Railway car has hundreds of sensors. </li>
+<li>Sensors track such things as the conditions experienced by the rail car, the state of individual parts, and GPS-based data for shipment tracking and logistics. </li>
+<li>During train derailments, governments introduced regulations that this kind of data be stored and analyzed to prevent future disasters.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>What is Big data?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Real-time big data isn’t just a process for storing petabytes or exabytes of data in a data warehouse,” says Michael Minelli, co-author of Big Data, Big Analytics.</li>
+<li>It’s about the ability to make better decisions and take meaningful actions at the right time. </li>
+<li>It’s about detecting fraud while someone is swiping a credit card</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>What is Big data?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Big data Characteristics</p>
+
+<ul>
+<li>Velocity: Moves at very high rates (think sensor-driven systems); Valuable in its temporal, high velocity state</li>
+<li>Volume: Fast-moving data creates massive historical archives; Valuable for mining patterns, trends and relationships</li>
+<li>Variety: Structured (logs, business transactions); Semi-structured and unstructured</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>What is Volume ?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Most organizations were already struggling with the increasing size of their databases. </li>
+<li>Firms were Creating 5 exabytes of digital data until 2003. Created  the same amount of data in two days in 2011. 
+– expected to fill the same in 10 minutes</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>What is Velocity ?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>A conventional understanding of velocity typically considers how quickly the data is arriving and stored, and its associated rates of retrieval.</p></li>
+<li><p>Two aspects to velocity, 
+– one representing the throughput of data 
+– the other representing latency</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>What is Velocity?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Throughput is data moving in the pipes. 
+– Global mobile data is growing at a 78 percent compounded growth rate and is expected to reach 10.8 exabytes per month in 2016 as consumers share more pictures and videos. 
+– To analyze this data, the corporate analytics infrastructure is seeking bigger pipes and massively parallel processing</p></li>
+<li><p>Latency is the other measure of velocity</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>What is Variety?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Variety represents all types of data – 
+– a fundamental shift in analysis requirements from traditional structured data to include raw, semi-structured, and unstructured data as part of the decision-making and insight process.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>What is Veracity?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Veracity represents both the credibility of the data source as well as the suitability of the data for the target audience</li>
+<li>Source credibility. 
+– If an organization were to collect product information from third parties and offer it to their contact center employees to support customer queries, the data would have to be screened for source accuracy and credibility.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>What is data?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Data is everywhere</li>
+<li>The word data refers to information presented in whatever form agreed upon by the parties creating and using the data.</li>
+<li>Data being produced today has a very short shelf-life</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>What is data?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Amount of data available to the enterprise is on the rise </li>
+<li>Percent of data it can process, understand, and analyze is on the decline, thereby creating the blind zone</li>
+<li>It is easy to testify to the growing gap between the generation of data and understanding of it. </li>
+<li>Lying hidden in all this data is information, potentially useful information, that is rarely made explicit or taken advantage of.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>What is data?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>As the volume of data increases, inexorably, the proportion of it that people understand decreases, alarmingly. </li>
+<li>Organizations need to analyze this data in near real time if they hope to find insights in this data</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>What is data?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Ubiquitous electronics records  decisions,  choices in the supermarket, financial habits,  movements etc</li>
+<li>Data is often too specific to be useful to us as decision support</li>
+<li>Data, as such, seldom delivers line by line, fact by fact, or category by category any value to the user. </li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    <h2>What are the properties of Raw Data?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>The raw data is only partially structured</li>
+<li>The raw data is written once and never changed again</li>
+<li>Raw data come in as streams with high throughput (hundreds of MB/s), depending on the sensor devices. </li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-18" style="background:;">
+  <hgroup>
+    <h2>What are the properties of Raw Data?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>They have to be recorded as they come in, because in most cases there is no way of repeating the measurement.</li>
+<li>For the majority of applications, the raw data is not interesting. </li>
+<li>What the users need are aggregates, derived values, or—in case of text fields—some kind of abstract of “what the text says”.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-19" style="background:;">
+  <hgroup>
+    <h2>What is structured data?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Structured data is data that is organized into entities that have a defined format, such as XML documents or database tables that conform to a particular predefined schema.</li>
+<li>Semi-structured data, on the other hand, is looser, and though there may be a schema, it is often ignored.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-20" style="background:;">
+  <hgroup>
+    <h2>What is unstructured data?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Unstructured data does not have any particular internal structure</p></li>
+<li><p>Information has gone from scarce to superabundant. That brings huge new benefits,  says Kenneth Cukier—but also big headaches</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-21" style="background:;">
+  <hgroup>
+    <h2>Why analyze Big Data?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Across industries it is becoming important to make sense out of this data and gain competitive advantage.<br></li>
+<li>Below are the few use cases of Big Data:
+– In the Telecom industry, Operators generate 5 to 10 TB of call record day every day. These Big Data can be mined for marketing campaign, network optimization.
+– In the Retail Industry, pricing is a very important attribute. Big Data helps to compare pricing across retailers and product categories and set the optimum price.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-22" style="background:;">
+  <hgroup>
+    <h2>What are the Types of Data</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Social network profiles
+– Tapping user profiles from Facebook, LinkedIn, Yahoo, Google, and specific-interest social or travel sites, to cull individuals’ profiles and demographic information, and extend that to capture their hopefully-like-minded networks.  </li>
+<li>Social influencers
+– Editor, analyst and subject-matter expert blog comments, user forums, Twitter &amp; Facebook “likes,” Yelp-style catalog and review sites, and other review-centric sites like Apple’s App Store, Amazon, ZDNet, etc.  </li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-23" style="background:;">
+  <hgroup>
+    <h2>What are the Sources of Data</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Internal Sources
+– Corporate databases, company documents</li>
+<li>Personal Sources
+– Personal thoughts, opinions, experiences</li>
+<li>External Sources
+– Commercial databases, government reports, and corporate Web sites.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-24" style="background:;">
+  <hgroup>
+    <h2>What is data science?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Data science is 
+– an emerging field, 
+– with rapid changes, 
+– great uncertainty, and 
+– exciting opportunities. </li>
+<li>Data science is a discipline that combines 
+– Math 
+– Programming 
+– Scientific instinct</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-25" style="background:;">
+  <hgroup>
+    <h2>What is data science?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Data science incorporates varying elements and builds on techniques and theories from many fields, including 
+– math, statistics, data engineering, pattern recognition and learning, advanced computing, visualization, uncertainty modeling, data warehousing, and high performance computing 
+– To extract meaning from data and creating data products.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-26" style="background:;">
+  <hgroup>
+    <h2>What is data science?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Data Science
+–  is a composite of a number of pre-existing disciplines
+– Data science enables the creation of data products. </li>
+<li>Google generates and manages data products. </li>
+<li>Facebook and LinkedIn use patterns of friendship relationships to suggest relationships with frightening accuracy. </li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-27" style="background:;">
+  <hgroup>
+    <h2>Who is a data scientist?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>A practitioner of data science is called a data scientist.</li>
+<li>The term was coined by DJ Patil and Jeff Hammerbacher
+Who is a data scientist?</li>
+<li>Data scientists are the people who understand how to fish out answers to important business questions</li>
+<li>They bring structure to large quantities of formless data and make analysis possible.</li>
+<li>They identify rich data sources, join them with other, potentially incomplete data sources, and clean the resulting set</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-28" style="background:;">
+  <hgroup>
+    <h2>Who is a data scientist?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Data Scientist is a hybrid of data hacker, analyst, communicator, and trusted adviser The combination is extremely powerful—and rare.</li>
+<li>Facebook’s data team created the language Hive for programming Hadoop projects</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-29" style="background:;">
+  <hgroup>
+    <h2>What is the need for data scientist?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Increase in the demand for data scientists is due to the success of the major Internet companies.<br></li>
+<li>Google , Facebook, LinkedIn, and  Amazon have all made their marks by turning data  into something of value. </li>
+<li>Whether that value is a search result, a targeted advertisement, or a list of possible acquaintances, data science is producing products that people want and value.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-30" style="background:;">
+  <hgroup>
+    <h2>What are the traits of data scientist?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Technical expertise: the best data scientists typically have deep expertise in some scientific discipline.</li>
+<li>Curiosity: a desire to go beneath the surface and discover and distill a problem down into a very clear set of hypotheses that can be tested.</li>
+<li>Storytelling: the ability to use data to tell a story and to be able to communicate it effectively.</li>
+<li>Cleverness: the ability to look at a problem in different, creative ways.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-31" style="background:;">
+  <hgroup>
+    <h2>What are responsibilities of DS?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>collecting and analyzing data to evaluate existing and potential product and service markets</li>
+<li>Lead the design, development and deployment of a suite of products and solutions enabled by Big Data</li>
+<li>Guide consultative teams on early adopter engagements</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-32" style="background:;">
+  <hgroup>
+    <h2>What is expected of a data scientist?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Future Job Ads</p>
+
+<ul>
+<li>To understand, 
+– The future is in search of a multi skilled person
+– Who understands data 
+– Who understands data modeling
+– Who understands business
+– Who understands statistics
+– Who can work at code level
+– etc</li>
+</ul>
+
+<p>Future  Job Ads</p>
+
+<ul>
+<li>Data scientist required.
+– Must be able to work with highly diverse datasets, both structured and unstructured. 
+– Top mathematical skills needed to create appropriate models, along with excellent computer science skills to build and implement these. 
+– A deep understanding of the consumer products industry is a must. 
+– Ideally 2-5+ years experience. 
+– Should have strong ability to influence others.”</li>
+</ul>
+
+<p>Future Job Ads</p>
+
+<ul>
+<li>Marble Security is looking for an experienced innovative data research analyst with expert knowledge in building a highly reliable, redundant and scalable system to deliver rich risk analytics for the enterprise IT Admin to control mobile risk. The risk data set would include employee owned mobile devices, access networks, applications, etc. In addition, responsibilities include interacting with various teams including Product Management, Engineering, and Marketing to enhance the Marble Security solution.</li>
+</ul>
+
+<p>Bigdata and BI</p>
+
+<ul>
+<li>There are four types of big data BI that really aid business:
+– Prescriptive – This type of analysis reveals what actions should be taken. This is the most valuable kind of analysis and usually results in rules and recommendations for next steps.</li>
+</ul>
+
+<p>– Predictive – An analysis of likely scenarios of what might happen. The deliverables are usually a predictive forecast.</p>
+
+<p>Bigdata and BI</p>
+
+<ul>
+<li>There are four types of big data BI that really aid business:
+– Diagnostic – A look at past performance to determine what happened and why. The result of the analysis is often an analytic dashboard.</li>
+</ul>
+
+<p>– Descriptive – What is happening now based on incoming data. To mine the analytics, you typically use a real-time dashboard and/or email reports.</p>
+
+<p>BI Frame work
+ BI Frame work</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-33" style="background:;">
+  <hgroup>
+    <h2>Big Data deployment?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Deploying smart meter systems presents an immediate technical challenge: </p></li>
+<li><p>Going from one meter reading a month to smart meter readings every 15 minutes works out to 96 million reads per day for every million meters: a 3,000-fold increase in data collection rates</p></li>
+<li><p>provides a better understanding of customer segmentation and behavior
+Big Data deployment?</p></li>
+<li><p>A single flight from London’s Heathrow Airport to John F. Kennedy in New York would generate about 650TB of data!</p></li>
+<li><p>Most of this data is likely never looked at, unless disaster strikes</p></li>
+<li><p>Data is “dropped to the floor” and is referred to as data exhaust
+What is the impact of big data ?</p></li>
+<li><p>Companies like Facebook,  LinkedIn, Yahoo, and Google are generating data not only as their primary product, but are analyzing  it to continuously improve their products. </p></li>
+<li><p>Pharmaceutical and biomedical companies are using big  data to find new cures and analyze genetic information, while marketers leverage the same  technology to generate new customer insights.</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-34" style="background:;">
+  <hgroup>
+    <h2>What is the impact of Big data?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Businesses embrace Big Data to know more about their customers</p></li>
+<li><p>Hospitals can deliver effective, personalized medicine to patients</p></li>
+<li><p>Governments can mine enormous data resources to more effectively serve  constituents </p></li>
+<li><p>Energy companies can bring more renewable energy on-line using a highly instrumented smart  grid, smart meters at the home, and increasingly accurate weather forecasts</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-35" style="background:;">
+  <hgroup>
+    <h2>What is the impact of Big data?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Drug researchers use vast genomics databases to discover the next generation of cancer treatments. </li>
+<li>Big Data is already an important part of the $64 billion database and data analytics market and offers commercial opportunities of a comparable scale to enterprise software in the late 1980s, the Internet boom of the 1990s, and the social media explosion of today.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-36" style="background:;">
+  <hgroup>
+    <h2>Session 1 summary &amp; Questions</h2>
+  </hgroup>
+  <article data-timings="">
+    <h2>Session 2 know your datasets and hidden business</h2>
+
+<ul>
+<li>11:15 to 12:30 
+– Static and Streaming data at high velocity 
+– Big Data sources, e.g. web logs, click stream, sensor data, unstructured and semi-structured content
+– Need to analyze complex data sources 
+– Role of information management
+– Challenges for managing and analyzing big data
+– Analytical workloads and Types  
+– Structured data analysis 
+– Multi-structured data analysis 
+– Extended Analytical environment
+– Supplying consistent data to multiple analytical platforms</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-37" style="background:;">
+  <hgroup>
+    <h2>Where are the sources of big data ?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Primary sources of big data
+– Meteorology 
+– Complex physics simulations
+– Biology 
+– Business</li>
+<li>Web searching</li>
+<li>Social networking</li>
+<li>Telecommunications </li>
+<li>Many programs for storage and processing
+– Most Popular: HDFS, GFS, Hadoop, and MapReduce
+– No standard for processing/storing data</li>
+<li> No common “off the shelf” software </li>
+<li>Increases the difficulty in mining data within a field or industry</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-38" style="background:;">
+  <hgroup>
+    <h2>Where Is This “Big Data” Coming From ?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>From transactions to observations
+What is the use of big data?</p>
+
+<ul>
+<li>The value of big data to an organization falls into two categories: 
+– Analytical use: analytics can reveal insights hidden previously by data too costly to process, such as peer influence among customers, revealed by analyzing shoppers’ transactions and social and geographical data. 
+– Enabling new products: by combining a large number of signals from a user’s actions and those of their friends, Facebook has been able to craft a highly personalized user experience and create a new kind of advertising business</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-39" style="background:;">
+  <hgroup>
+    <h2>What is big data challenge?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Organizations today are facing more and more Big Data challenges. </li>
+<li>They have access to a wealth of information, but they don’t know how to get value out of it because it is sitting in its most raw form or in a semistructured or unstructured format; and as a result, they don’t even know whether it’s worth keeping</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-40" style="background:;">
+  <hgroup>
+    <h2>What is big data challenge?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>First, data quality remains an issue. 
+– The more data you accumulate, the harder it is to keep everything consistent and correct. </li>
+<li>Second, adequate data characterization (metadata to the geeks) is critical. 
+– How you deal with data -- even how you choose to organize its storage -- requires you to know how much data there is going to be and how fast it&#39;s likely to grow and change. A query that runs well to find 100 rows in a million-row table may not run well on 100 billion rows. </li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-41" style="background:;">
+  <hgroup>
+    <h2>What is big data challenge?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Third, interpretation remains more of an art than a science. 
+– Software developers have had to design efficient filters and pattern recognizers that can sift through mountains of data and find (perhaps unanticipated) patterns that are relevant to a dimension of interest.</li>
+<li>Fourth, data visualization -- representing results in an easily consumable form -- is critical. 
+– What good is all that data if you can&#39;t understand what the interpreters--human or software--concluded from their analysis. </li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-42" style="background:;">
+  <hgroup>
+    <h2>What is big data challenge?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Fifth, you&#39;re generally going to have to choose 
+– between a real-time view of the data (which may mean that you have to continuously recompute everything whenever the data changes) and a complete but retrospective view which will always be somewhat out of date.</li>
+<li>Sixth, how do you know in advance how long the data is relevant or valuable? 
+– Data costs money to acquire, store, analyze and back up. A retention policy beyond a typical &quot;keep everything forever&quot; approach is needed, and that policy has to be enforced.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-43" style="background:;">
+  <hgroup>
+    <h2>What are the associated difficulties?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Storage
+– Developing a system in which very large amounts of data can be stored securely and accessed quickly</li>
+<li>Transfer
+– Transfer from the storage site to the processing site
+– Moving large amounts of data over TCP is costly</li>
+<li>Processing
+– How powerful of a system is needed?
+– “There is a lot of data but no information”
+– Processing the data in an efficient manner and obtaining the correct information</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-44" style="background:;">
+  <hgroup>
+    <h2>What is big data solution used for?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Big Data solutions are ideal 
+– for analyzing not only raw structured data, but semistructured and unstructured data from a wide variety of sources.
+– when all, or most, of the data needs to be analyzed versus a sample of the data; or a sampling of data isn’t nearly as effective as a larger set of data from which to derive analysis.
+– for iterative and exploratory analysis when business measures on data are not predetermined.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-45" style="background:;">
+  <hgroup>
+    <h2>What is an analytical workload?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>The practice of analytics involves applying science and computing technology to vast amounts of raw data to yield valuable insights, and the “analytics” label covers a wide array of applications, tools, and techniques.</li>
+<li>Predictive analytics, in-database analytics, advanced analytics, web analytics etc are collectively called as analytical workload.
+What is an analytical workload?</li>
+<li>Most interested parties can answer this question, more or less correctly, in a general way: “heavy statistical processing,” “lots of complex queries,” and so on</li>
+<li>Analytics processing is characterized by fewer users (business analysts rather than customers and POS operators) submitting fewer requests, but queries can be very complex and resourceintensive. </li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-46" style="background:;">
+  <hgroup>
+    <h2>What is an analytical workload?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Analytic workloads tend to share 
+– a set of attributes, 
+– with strong design and 
+– deployment implications 
+– for the processing systems assigned to handle these workloads.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-47" style="background:;">
+  <hgroup>
+    <h2>What is an analytical workload?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>An analytic workload will exhibit one or more of the following characteristics, each of which elevates a given workload’s degree of difficulty:
+– Extreme data volume
+– Data model complexity
+– Variable and unpredictable traversal paths, patterns, and frequencies
+– Set-oriented processing and bulk operations
+– Multi-step, multi-touch analysis algorithms
+– Complex computation
+– Temporary or intermediate staging of data
+– Change isolation/data stability implications</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-48" style="background:;">
+  <hgroup>
+    <h2>What is an analytical workload?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Analytical platforms
+Business value of analytic platforms</p>
+
+<ul>
+<li>Kelley Blue Book – Consolidates millions of auto transactions each week to calculate car valuations</li>
+<li>AT&amp;T Mobility – Tracks purchasing patterns for 80M customers daily to optimize targeted marketing<br></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-49" style="background:;">
+  <hgroup>
+    <h2>Which platform do you choose?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Big data platform comparison</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-50" style="background:;">
+  <hgroup>
+    <h2>What is the Big data hype cycle?</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-51" style="background:;">
+  <hgroup>
+    <h2>Session 2 summary &amp; Questions</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Read-And-Delete'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='What is Big data?'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='What is Big Data?'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='What is Big data?'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='What is an example for big data flow?'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='What is Big data?'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='What is Big data?'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='What is Volume ?'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='What is Velocity ?'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='What is Velocity?'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='What is Variety?'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='What is Veracity?'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='What is data?'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='What is data?'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='What is data?'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='What is data?'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='What are the properties of Raw Data?'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='What are the properties of Raw Data?'>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title='What is structured data?'>
+         19
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title='What is unstructured data?'>
+         20
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title='Why analyze Big Data?'>
+         21
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=22 title='What are the Types of Data'>
+         22
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=23 title='What are the Sources of Data'>
+         23
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title='What is data science?'>
+         24
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='What is data science?'>
+         25
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=26 title='What is data science?'>
+         26
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=27 title='Who is a data scientist?'>
+         27
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=28 title='Who is a data scientist?'>
+         28
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=29 title='What is the need for data scientist?'>
+         29
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=30 title='What are the traits of data scientist?'>
+         30
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=31 title='What are responsibilities of DS?'>
+         31
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=32 title='What is expected of a data scientist?'>
+         32
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=33 title='Big Data deployment?'>
+         33
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=34 title='What is the impact of Big data?'>
+         34
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=35 title='What is the impact of Big data?'>
+         35
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=36 title='Session 1 summary &amp; Questions'>
+         36
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=37 title='Where are the sources of big data ?'>
+         37
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=38 title='Where Is This “Big Data” Coming From ?'>
+         38
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=39 title='What is big data challenge?'>
+         39
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=40 title='What is big data challenge?'>
+         40
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=41 title='What is big data challenge?'>
+         41
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=42 title='What is big data challenge?'>
+         42
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=43 title='What are the associated difficulties?'>
+         43
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=44 title='What is big data solution used for?'>
+         44
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=45 title='What is an analytical workload?'>
+         45
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=46 title='What is an analytical workload?'>
+         46
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=47 title='What is an analytical workload?'>
+         47
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=48 title='What is an analytical workload?'>
+         48
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=49 title='Which platform do you choose?'>
+         49
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=50 title='What is the Big data hype cycle?'>
+         50
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=51 title='Session 2 summary &amp; Questions'>
+         51
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
